@@ -2,7 +2,7 @@ import GoogleIcon from "../assets/google.svg";
 import { useActionForm } from "@gadgetinc/react";
 import { api } from "../api";
 import { Link, useLocation } from "react-router-dom";
-
+import "../sign-in.css"; // Import the CSS file
 export default function () {
   const {
     register,
@@ -12,6 +12,7 @@ export default function () {
   const { search } = useLocation();
 
   return (
+    <div className="auth-container">
     <form className="custom-form" onSubmit={submit}>
       <h1 className="form-title">Sign in</h1>
       <div className="custom-form">
@@ -41,5 +42,6 @@ export default function () {
         </p>
       </div>
     </form>
+    </div>
   );
 }

@@ -22,7 +22,7 @@ export default function HomePage() {
       <div className="hero-section" >
         <img 
           src={image}
-          alt="Shelter Kitchen" 
+          alt="ShelterKitchen" 
           className="hero-image"
         />
         <h2 className="hero-text">

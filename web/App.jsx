@@ -149,12 +149,12 @@ const Header = () => {
       </a>
       <div className="header-content">
         <SignedOut>
-          <Link to="/sign-in" style={{ color: "black" }}>
+          {/* <Link to="/sign-in" style={{ color: "black" }}>
             Sign in
           </Link>
           <Link to="/sign-up" style={{ color: "black" }}>
             Sign up
-          </Link>
+          </Link> */}
         </SignedOut>
         <SignedIn>
           <NavLink to="/signed-in" style={({ isActive }) => ({ 

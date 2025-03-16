@@ -3,6 +3,7 @@ import { useActionForm } from "@gadgetinc/react";
 import { api } from "../api";
 import { useLocation } from "react-router-dom";
 
+
 export default function () {
   const {
     register,
@@ -12,6 +13,7 @@ export default function () {
   const { search } = useLocation();
 
   return (
+    <div className="auth-container">
     <form className="custom-form" onSubmit={submit}>
       <h1 className="form-title">Create account</h1>
       <div className="custom-form">
@@ -45,10 +47,11 @@ export default function () {
         {isSubmitSuccessful && (
           <p className="format-message success">Please check your inbox</p>
         )}
-        <button disabled={isSubmitting} type="submit">
+        <button disabled={isSubmitting} type="submit" >
           Sign up
         </button>
       </div>
     </form>
+    </div>
   );
 }

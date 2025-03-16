@@ -24,6 +24,14 @@ export const permissions: GadgetPermissions = {
             update: true,
           },
         },
+        shelter: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
+            update: true,
+          },
+        },
         user: {
           read: {
             filter: "accessControl/filters/user/tenant.gelly",

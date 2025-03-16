@@ -16,16 +16,18 @@ export const permissions: GadgetPermissions = {
         action: true,
       },
       models: {
-        invite: {
+        movie: {
           read: true,
           actions: {
             create: true,
             delete: true,
-            resend: true,
+            update: true,
           },
         },
         user: {
-          read: true,
+          read: {
+            filter: "accessControl/filters/user/tenant.gelly",
+          },
           actions: {
             changePassword: {
               filter: "accessControl/filters/user/tenant.gelly",
@@ -33,11 +35,12 @@ export const permissions: GadgetPermissions = {
             signOut: {
               filter: "accessControl/filters/user/tenant.gelly",
             },
-            update: {
-              filter: "accessControl/filters/user/tenant.gelly",
-            },
           },
         },
+      },
+      actions: {
+        findSimilarMovies: true,
+        ingestData: true,
       },
     },
     unauthenticated: {
@@ -54,6 +57,9 @@ export const permissions: GadgetPermissions = {
           },
         },
       },
+    },
+    "shopify-app-users": {
+      storageKey: "Role-Shopify-App",
     },
   },
 };
